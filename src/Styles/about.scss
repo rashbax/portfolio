@@ -1,0 +1,65 @@
+@import '../indexx.scss';
+
+// About page
+.about{
+    height: 100%;
+    min-height: 100vh;
+    font-family: $fontfamily1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $basiccolor;
+
+    // about row
+    &__row{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.4fr 1fr;
+        gap: 0 20px;
+    }
+
+    // about col
+    &__col{
+        display: flex;
+        justify-content: flex-end;
+
+        // About titles
+        h1,h2{
+            font-size: $fontsize3;
+            font-weight: 600;
+            line-height: 50px;
+            text-align: end;
+            display: inline-block;
+            
+        }
+        h1{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                height: 5px;
+                width: 100%;
+                background-color: #405DE6;
+                left: 0;
+                top: 50px;
+            }
+        }
+
+        // about texts
+        p{
+            font-size: $fontsize1;
+            line-height: 25px;
+        }
+    }
+
+    // about button
+    &__cv{
+        // margin-right: 500px;
+        margin-top: 20px;
+        a{
+            color: $basiccolor;
+        }
+    }
+}

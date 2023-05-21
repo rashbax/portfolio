@@ -1,0 +1,106 @@
+@import '../indexx.scss';
+
+// navbar
+.navbar{
+height: 80px;
+width: 100%;
+background-color: $basiccolor;
+position: fixed;
+z-index: 777;
+    // navbar body
+    &__body{
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    // navbar logo
+    &__logo{
+        height: 50px;
+        img{
+            height: 100%;
+        }
+    }
+
+    // navbar  menu
+    &__menu{
+        height: 100%;
+        // menu list
+        &-list{
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        // menu item
+        &-item{
+            padding-left: 30px;
+            font-size: $fontsize2;
+            font-family: $fontfamily2;
+            color: rgb(213, 222, 230);
+            // menu link
+            // a{
+            //     color: rgb(213, 222, 230); 
+            // }
+        }
+
+        &-link{
+            font-family: $fontfamily2;
+            cursor: pointer;
+        }
+    }
+    &__active{
+        border-bottom: 1px solid #ffff !important;
+    }
+}
+
+// fixed social icons
+
+.social__icons{
+    position: fixed;
+    top: 30%;
+    left: 0;
+    &-item{
+        height: 60px;
+        width: 160px;
+        display: flex;
+        justify-content:end;
+        align-items: center;
+        transform: translateX(-115px);
+        transition: all .1s ease-in-out;
+        a{
+            color: #ffff;
+            font-size: 17px;
+            text-transform: capitalize;
+            font-family: $fontfamily1;
+        }
+
+        &:hover{
+            transform: translateX(0);
+            transition: all .3s ease-in;
+        }
+    }
+
+    .social-icon{
+        transform: scale(1.5);
+        margin:0px 15px;
+}
+.instagram{
+    background: linear-gradient(45deg, #405DE6, #5851Db, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+.github{
+    background-color: #171515;
+}
+.telegram{
+    background-color: #0088cc;
+}
+.resume{
+    background-color: #565f69;
+}
+}
+
+
+

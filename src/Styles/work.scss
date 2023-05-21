@@ -1,0 +1,101 @@
+@import '../indexx.scss';
+
+// work page
+.work{
+    height: 100%;
+    min-height: 100vh;
+    padding: 6rem 0 2rem;
+    font-family: $fontfamily1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    // work body
+    &__body{
+        width: 50%;
+        margin: 0 auto;
+        top: 20%;
+        // position: absolute;
+        flex: 1;
+    }
+
+    // work head
+    &__head{
+        text-align: left;
+        h1{
+                font-size: $fontsize3;
+                font-weight: 700;
+                text-transform: capitalize;
+                display: inline-block;
+        }
+        p{
+            padding: 20px 0;
+        }
+    }
+
+    // work main
+    &__main{
+        
+
+        // work row
+        &-row{
+            display:grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        // work columns
+        &-col{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 210px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0px 5px 8px 0px rgba(10, 25, 47, 0.2);
+            border-radius: 10px;
+        }
+
+        // work card images
+        &-img{
+            margin: 10px 0;
+            height: 130px;
+            width: 85%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+                display: block;
+            }
+        }
+        
+        // work card items
+        &-items{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                // display: none;
+                width: 90%;
+                .work__title{
+                    font-weight: 600;
+                    font-size: $fontsize1;
+                    margin: 5px 0;
+                    
+                }
+        }
+        &-link{
+            display: flex;
+            align-items: center;
+            color: $basiccolor;
+            line-height: 5px;
+            &:hover{
+                text-decoration: 1px solid $basiccolor !important;
+            }
+        }
+    }
+}

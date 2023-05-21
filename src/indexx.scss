@@ -1,0 +1,347 @@
+// *================ NULL STYLE ================*//
+
+// *================ FONTS ================*//
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&family=Raleway&display=swap');
+
+// *================ VARIABLES ================*//
+// font family
+$fontfamily1:'Poppins', sans-serif;
+$fontfamily2: 'Raleway', sans-serif;
+
+// fontsize
+$fontsize1: 15px;
+$fontsize2: 20px;
+$fontsize3: 45px;
+$fontsize4: 35px;
+
+// font color
+
+$basiccolor: hsl(216, 65%, 11%);
+$color1:#405DE6;
+
+// *================ REUSABLE CLASSES ================*//
+
+.titleborder{
+    border-bottom: 5px solid $color1;
+    padding-bottom: 5px;
+    
+}
+
+// *================ BUTTONS ================*//
+
+.button{
+    border: 2px solid #0a192f;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: capitalize;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    line-height: 3px;
+    font-family: $fontfamily2;
+    font-weight:600 ;
+}
+
+// *================ BREAKPOINTS ================*//
+
+// For large devices
+@media screen and (max-width:992px) {
+    // body page
+    .home__body{
+        min-width: 70%;
+        p{
+            min-width: 100%;
+        }
+    }
+
+    // contact page
+    .contact{
+        &__body{
+            min-width: 60% ;
+        }
+    }
+
+    // work page
+    .work{
+        &__body{
+            width: 60%;
+        }
+    }
+}
+
+// For medium devices
+@media screen and (max-width:768px) {
+
+    // navbar 
+    .navbar{
+        height: 60px;
+
+        &__logo{
+            height: 40px;
+        }
+        &__menu{
+            display: none;
+        }
+    
+    }
+    .social__icons{
+                display: none;
+            }
+
+
+     // home page       
+    .home__body{
+        min-width: 90%;
+        .home__texts{
+            h2,h3{
+                max-width: 70%;
+            }
+        }
+    }
+
+    // about page
+    .about{
+        &__row{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1,h2{
+            font-size: $fontsize2;
+            line-height: 30px;
+            text-align: center;
+        }
+        p{
+            font-size: $fontsize1;
+            line-height: 20px;
+        }
+        h1{
+            &::after{
+                top: 27px;
+                height: 3px;
+            }
+        }
+        &__col{
+            padding: 5px 0;
+        }
+    }
+
+    // work page
+    .work{
+        &__body{
+            width: 70%;
+        }
+        &__main{
+            .work__title{
+                font-weight: 600;
+                font-size: $fontsize1;
+                margin: 5px 0;
+                
+            }
+        }
+    }
+
+    // menu page
+    .menu{
+        transform: translateY(0%) !important;
+        transition: .3s all ease;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .titleborder{
+        border-bottom: 3px solid $color1;
+    }
+
+    // home page
+    .home{
+        h2,h3{
+            font-size: $fontsize4 !important;
+            line-height: 35px !important;
+        }
+    }
+
+    // skills page
+    .skills{
+        &__body{
+            min-width:80% !important;
+            padding: 50px 0;
+        }
+        &__head{
+            h1{
+                font-size: $fontsize4 !important;
+            }
+        }
+        &__main{
+            
+            &-col{
+                height: 100px !important;
+            }
+            &-img{
+                height: 60px !important;
+                width: 60px !important;
+            }
+            &-title{
+                font-size: $fontsize1 !important;
+            }
+        }
+        
+    }
+
+    // work page
+    .work{
+        &__body{
+            width: 80%;
+        }
+        &__main{
+            
+            &-col{
+                height: 210px !important;
+                &-img{
+                    height: 100px !important;
+                    
+                }
+            }
+        }
+        &__head{
+            h1{
+                font-size: $fontsize2 !important;
+            }
+            p{
+                padding: 15px 0 !important;
+            }
+        }
+        
+    }
+
+    // contact page
+    .contact{
+        &__body{
+            min-width: 70%;
+        }
+        &__head{
+            h1{
+                font-size: $fontsize2;
+            }
+            p{
+                padding: 10px 0 !important;
+                line-height: normal;
+            }
+        }
+        &__social{
+            &-body{
+                min-width: 40% !important;
+            }
+        }
+        button{
+            font-size: $fontsize1 !important;
+        }
+    }
+    
+    // menu 
+    .menu{
+        height: 70px !important;
+        &__icon{
+            transform: scale(1.5) !important;
+        }
+        span{
+            padding-top: 5px !important;
+            font-size: 10px;
+        }
+    }
+}
+
+// For small devices
+@media screen and (max-width:398px) {
+
+    // home page
+    .home{
+        h2,h3{
+            font-size: $fontsize2 !important;
+            line-height: 25px !important;
+        }
+    }
+
+    // about page
+    .about{
+        h1,h2{
+            line-height: 25px;
+        }
+    }
+
+    // skills page
+    .skills{
+        &__head{
+            
+            h1{
+                font-size: $fontsize2 !important;
+            }
+        }
+        &__body{
+            min-width:90% 
+        }
+        &__main{
+            &-row{
+                grid-template-columns: repeat(2, 1fr) !important;
+                grid-template-rows: repeat(4, 1fr) !important;
+            }
+        }
+    }
+
+    // work page
+    .work{
+        
+        &__main{
+            &-row{
+                grid-template-columns: repeat(1, 1fr) !important;
+                grid-template-rows: repeat(6, 1fr) !important;
+                gap: 20px !important;
+            }
+            
+        }
+        
+    }
+
+    // contact page
+    .contact{
+        &__body{
+            min-width: 80%;
+        }
+        &__head{
+            h1{
+                font-size: $fontsize2;
+            }
+            p{
+                padding: 10px 0 !important;
+                line-height: normal;
+            }
+        }
+        &__social{
+            &-body{
+                min-width: 60% !important;
+            }
+        }
+        button{
+            font-size: $fontsize1 !important;
+        }
+    }
+
+    // bottom menu 
+    .menu{
+        height: 55px !important;
+        &__icon{
+            transform: scale(1.3) !important;
+        }
+        span{
+            
+            padding-top: 3px !important;
+        }
+    }
+    
+}
+
+
