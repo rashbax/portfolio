@@ -14,7 +14,7 @@ export default function Home() {
                 <p className='home__texts-child'>I'm a frontend developer in building expectional digital experiences. Currently i'm focused on building responsive web applications</p>
             </div>
             <div className="home__button">
-                <button className='button'><Link activeClass='navbar__active' className='navbar__menu-link' to='work' smooth={true} duration={500}>view work </Link><span><ArrowRightAltRounded/></span></button>
+            <Link activeClass='navbar__active' className='navbar__menu-link' to='work' smooth={true} duration={500}> <button className='button'>view work<span><ArrowRightAltRounded/></span></button></Link>
             </div>
         </div>     
     </div>

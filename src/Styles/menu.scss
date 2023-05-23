@@ -51,6 +51,7 @@
         cursor: pointer;
     }
     .active{
-        color: $basiccolor;
+        color: $color1;
+        transform: scale(1.1);
     }
 }
